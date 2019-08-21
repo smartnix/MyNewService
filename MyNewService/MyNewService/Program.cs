@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace MyNewService
 {
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
-        static void Main()
+        static void Main(string[] args)
         {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new MyNewService()
+                new MyNewService(args)
             };
             ServiceBase.Run(ServicesToRun);
         }
